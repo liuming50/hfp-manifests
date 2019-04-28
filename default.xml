@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default sync-j="4" revision="thud"/>
+
+  <remote fetch="https://github.com/liuming50" name="hfp"/>
+  <remote fetch="https://github.com/sergioprado" name="completion"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+
+  <project remote="yocto" name="poky" path="sources/poky"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="completion" name="bitbake-bash-completion" revision="master" path="sources/bitbake-bash-completion"/>
+
+  <project remote="hfp" name="meta-hfp" revision="master" path="sources/meta-hfp">
+    <linkfile dest="hfp-init-build-env" src="scripts/hfp-init-build-env"/>
+    <linkfile dest="README.md" src="README.md"/>
+  </project>
+</manifest>
